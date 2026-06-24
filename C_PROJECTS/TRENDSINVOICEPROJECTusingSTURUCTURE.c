@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 1. Sabse pehle humne ek structure define kiya (Jaise aaj class mein padha)
+
 struct Item {
     int item_id;
     char brand_name[20];
@@ -12,8 +12,7 @@ struct Item {
 
 int main()
 {
-    // 2. Ab alag-alag arrays ki jagah, humne structure ka ek SINGLE ARRAY banaya
-    // Aur isme wahi saara data bilkul simple tarike se initialize kar diya.
+    
     struct Item shop[10] = {
         {101, "Arrow", " Formal Shirt", 1500.0, 12.0, 20},
         {102, "Peter England", "Jeans", 1800.0, 15.0, 18},
@@ -61,7 +60,7 @@ int main()
             printf("--------------------------------------------------------------------\n");
             for (i = 0; i < 10; i++)
             {
-                // Yahan variable access karne ke liye dot (.) operator ka use kiya hai
+                
                 printf("%d\t%s\t\t%s\t\t%.2f\t%.2f\t\t%d\n", 
                        shop[i].item_id, 
                        shop[i].brand_name, 
@@ -81,7 +80,7 @@ int main()
 
             for (i = 0; i < 10; i++)
             {
-                // Sab jagah purane arrays ko hata kar 'shop[i].' laga diya hai
+                
                 if (shop[i].item_id == selected_id)
                 {
                     found = 1;
